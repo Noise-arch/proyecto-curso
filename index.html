@@ -5,28 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="icon" type="image/png" href="img/favicon-modified.png" />
+    <script src="/js/index.js"></script>
     <title>Proyecto Integrador - Curriculum Vitae</title>
   </head>
   <body class="flex flex-col items-center justify-center w-screen h-screen">
-    <div class="w-full relative h-1/2 flex bg-black">
+    <div id="html" class="hidden">
+      <div
+        onclick="HTMLCard('close')"
+        class="absolute w-full h-full bg-black bg-opacity-60 z-20"
+      ></div>
+      <div
+        class="w-1/3 gap-8 flex self-center items-center p-8 justify-center flex-col h-1/3 absolute bg-white rounded-md top-1/2 left-1/2 -translate-x-1/2 z-30 -translate-y-1/2"
+      >
+        <h3 class="font-bold font-['Lato'] text-orange-600 text-3xl">HTML</h3>
+        <p class="font-['Lato'] text-center">
+          Amplio conocimiento de los diferentes elementos y tags de HTML, y su
+          escritura semantica.
+        </p>
+        <button
+          onclick="HTMLCard('close')"
+          class="font-['Lato'] hover:text-white hover:bg-zinc-800 transition font-medium bg-orange-600 px-4 py-2 rounded-md"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+    <div id="css" class="hidden">
+      <div
+        onclick="CSSCard('close')"
+        class="absolute w-full h-full bg-black bg-opacity-60 z-20"
+      ></div>
+      <div
+        class="w-1/3 gap-8 flex self-center items-center p-8 justify-center flex-col h-1/3 absolute bg-white rounded-md top-1/2 left-1/2 -translate-x-1/2 z-30 -translate-y-1/2"
+      >
+        <h3 class="font-bold font-['Lato'] text-blue-600 text-3xl">CSS</h3>
+        <p class="font-['Lato'] text-center">
+          Buen manejo de las hojas de estilo en cascada para lograr una web
+          moderna y visualmente atractiva.
+        </p>
+        <button
+          onclick="CSSCard('close')"
+          class="font-['Lato'] hover:text-white hover:bg-zinc-800 transition font-medium bg-blue-600 px-4 py-2 rounded-md"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+    <div id="js" class="hidden">
+      <div
+        onclick="JSCard('close')"
+        class="absolute w-full h-full bg-black bg-opacity-60 z-20"
+      ></div>
+      <div
+        class="w-1/3 gap-8 flex self-center items-center p-8 justify-center flex-col h-1/3 absolute bg-white rounded-md top-1/2 left-1/2 -translate-x-1/2 z-30 -translate-y-1/2"
+      >
+        <h3 class="font-bold font-['Lato'] text-yellow-500 text-3xl">
+          JavaScript
+        </h3>
+        <p class="font-['Lato'] text-center">
+          Manejo fluido y proactivo en el uso de JavaScript para lograr WebApps
+          con funcionalidad como la carga dinámica de contenido o el server-side
+          rendering en frameworks como ReactJS y NextJS
+        </p>
+        <button
+          onclick="JSCard('close')"
+          class="font-['Lato'] hover:text-white hover:bg-zinc-800 transition font-medium bg-yellow-500 px-4 py-2 rounded-md"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+    <header class="w-full relative h-1/2 flex bg-black">
       <img
         class="object-cover w-full z-0 opacity-40 bg-black"
         src="/proyecto-final-curso/img/hero-bg.jpg"
-        alt=""
+        alt="Hero Image: Código JavaScript"
       />
       <div
         class="absolute flex gap-2 items-center flex-col top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10"
       >
-        <h1 class="text-white font-bold text-5xl">Thomas Wade</h1>
-        <p class="text-zinc-300 text-3xl">Desarrollador Web Full-Stack</p>
+        <h1 class="text-white font-bold text-5xl font-['Lato']">Thomas Wade</h1>
+        <p class="text-zinc-300 text-3xl font-['Lato']">
+          Desarrollador Web Full-Stack
+        </p>
         <p class="text-zinc-300 text-xl"></p>
       </div>
-    </div>
-    <div
+    </header>
+    <main
       class="rounded-xl gap-2 relative items-center justify-center p-4 flex flex-col h-1/2 w-full shadow-xl"
     >
-      <div class="flex gap-64 -translate-y-1/2 -top-6 absolute">
+      <nav class="flex gap-64 -translate-y-1/2 -top-6 absolute">
         <div class="flex items-center gap-4">
           <a
             href="/proyecto-final-curso/index.html"
@@ -100,19 +169,41 @@
             </svg>
           </a>
         </div>
-      </div>
-      <img
-        class="rounded-full border-2 border-white -translate-y-1/2 top-0 absolute aspect-square w-[150px] h-[150px] border-2"
-        src="https://noise-arch.github.io/proyecto-final-curso/img/pfp.jpg"
-        alt="Foto de Perfil"
-      />
-      <p class="text-center flex w-1/2 text-xl">
-        Me considero una persona organizada, creativa y responsable. Me apasiona
-        mi trabajo y, cuando un proyecto me parece interesante, me vuelco en él,
-        buscando las mejores soluciones para los clientes. Tengo amplios
-        conocimientos de diseño y desarrollo web usando lenguajes como JavaScript y
-        maquetando con HTML y CSS.
-      </p>
-    </div>
+      </nav>
+      <section class="items-center gap-12  justify-center p-4 flex flex-col">
+        <img
+          class="rounded-full border-2 border-white -translate-y-1/2 top-0 absolute aspect-square w-[150px] h-[150px] border-2"
+          src="https://noise-arch.github.io/proyecto-final-curso/img/pfp.jpg"
+          alt="Foto de Perfil"
+        />
+        <p class="text-center flex w-1/2 text-xl font-['Lato']">
+          Me considero una persona organizada, creativa y responsable. Me
+          apasiona mi trabajo y, cuando un proyecto me parece interesante, me
+          vuelco en él, buscando las mejores soluciones para los clientes. Tengo
+          amplios conocimientos de diseño y desarrollo web usando lenguajes como
+          JavaScript y maquetando con HTML y CSS.
+        </p>
+        <div class="flex gap-4">
+          <button
+            onclick="HTMLCard('open')"
+            class="p-4 w-28 hover:text-white hover:bg-zinc-800 transition font-semibold font-['Lato'] bg-orange-600 rounded-xl"
+          >
+            HTML
+          </button>
+          <button
+            onclick="CSSCard('open')"
+            class="p-4 w-28 hover:text-white hover:bg-zinc-800 transition font-semibold font-['Lato'] bg-blue-600 rounded-xl"
+          >
+            CSS
+          </button>
+          <button
+            onclick="JSCard('open')"
+            class="p-4 w-28 hover:text-white hover:bg-zinc-800 transition font-semibold font-['Lato'] bg-yellow-500 rounded-xl"
+          >
+            JavaScript
+          </button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

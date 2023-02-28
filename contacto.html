@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="img/favicon-modified.png" />
 
     <title>Proyecto Integrador - Curriculum Vitae</title>
   </head>
   <body class="flex flex-col items-center justify-center w-screen h-screen">
-    <div class="w-full relative h-1/2 flex bg-black">
+    <header class="w-full relative h-1/2 flex bg-black">
       <img
         class="object-cover w-full z-0 opacity-40 bg-black"
         src="/proyecto-final-curso/img/hero-bg.jpg"
-        alt=""
+        alt="Hero Image: Código JavaScript"
       />
       <div
         class="absolute flex gap-2 items-center flex-col top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10"
       >
-        <h1 class="text-white font-bold text-5xl">Thomas Wade</h1>
-        <p class="text-zinc-300 text-3xl">Desarrollador Web Full-Stack</p>
+        <h1 class="text-white font-bold text-5xl font-['Lato']">Thomas Wade</h1>
+        <p class="text-zinc-300 text-3xl font-['Lato']">Desarrollador Web Full-Stack</p>
         <p class="text-zinc-300 text-xl"></p>
       </div>
-    </div>
-    <div
+    </header>
+    <main
       class="rounded-xl gap-2 relative items-center justify-center p-4 flex flex-col h-1/2 w-full shadow-xl"
     >
-      <div class="flex gap-4 -translate-y-1/2 -top-6 absolute">
+      <nav class="flex gap-4 -translate-y-1/2 -top-6 absolute">
         <div class="flex items-center gap-4">
           <a
             href="/proyecto-final-curso/index.html"
@@ -100,9 +101,9 @@
             </svg>
           </a>
         </div>
-      </div>
-      <div class="flex flex-col just items-center gap-8">
-        <p class="text-center flex text-3xl">Contacto</p>
+      </nav>
+      <section class="flex flex-col just items-center gap-8">
+        <h1 class="text-center flex text-3xl font-['Lato']">Contacto</h1>
         <form class="flex flex-col gap-2">
           <div class="flex items-center">
             <label class="w-32 font-medium" for="name">Nombre:</label>
@@ -110,6 +111,7 @@
               class="border border-black w-72 rounded-md p-1"
               placeholder="Thomas Wade"
               type="text"
+              required
               name="name"
               id="name"
             />
@@ -119,7 +121,8 @@
             <input
               class="border border-black w-72 rounded-md p-1"
               placeholder="thomas@wade.gmail"
-              type="text"
+              type="email"
+              required
               name="email"
               id="email"
             />
@@ -130,13 +133,20 @@
               class="border border-black w-72 rounded-md p-1"
               placeholder="¡Hola! Te contacto por..."
               name="msg"
+              required
               id="msg"
               cols="30"
               rows="10"
             ></textarea>
           </div>
+          <button
+            type="submit"
+            class="py-1 w-1/2 transition border text-white justify-center self-center border-black flex bg-black hover:bg-white hover:text-black"
+          >
+            Enviar
+          </button>
         </form>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
 </html>
