@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="img/favicon-modified.png" />
+    <script src="/js/index.js"></script>
 
     <title>Proyecto Integrador - Curriculum Vitae</title>
   </head>
@@ -20,11 +21,14 @@
         class="absolute flex gap-2 items-center flex-col top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10"
       >
         <h1 class="text-white font-bold text-5xl font-['Lato']">Thomas Wade</h1>
-        <p class="text-zinc-300 text-3xl font-['Lato']">Desarrollador Web Full-Stack</p>
+        <p class="text-zinc-300 text-3xl font-['Lato']">
+          Desarrollador Web Full-Stack
+        </p>
         <p class="text-zinc-300 text-xl"></p>
       </div>
     </header>
     <main
+      id="main"
       class="rounded-xl gap-2 relative items-center justify-center p-4 flex flex-col h-1/2 w-full shadow-xl"
     >
       <nav class="flex gap-48 -translate-y-1/2 -top-6 absolute">
@@ -110,7 +114,9 @@
         />
         <article class="flex flex-col justify-center items-center gap-12">
           <h2 class="text-center flex text-3xl font-['Lato']">Formación</h2>
-          <ul class="flex flex-col font-['Lato'] list-disc list-inside w-1/3 gap-4 text-xl">
+          <ul
+            class="flex flex-col font-['Lato'] list-disc list-inside w-1/3 gap-4 text-xl"
+          >
             <li>
               <b>2019 Curso de programación web Google Activate:</b> 40 horas de
               duración sobre cómo adaptar los sitios web y aplicaciones móviles
@@ -123,6 +129,39 @@
             </li>
           </ul>
         </article>
+        <div class="flex items-center gap-2 top-1/2 z-20 left-4">
+          <p id="btn-text">Dark Mode</p>
+          <button onclick="DarkModeHandler(true)" id="dmSwitchOn" class="p-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              class="fill-black"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"
+              />
+            </svg>
+          </button>
+          <button
+            onclick="DarkModeHandler(false)"
+            id="dmSwitchOff"
+            class="hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              class=""
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+              />
+            </svg>
+          </button>
+        </div>
       </section>
     </main>
   </body>

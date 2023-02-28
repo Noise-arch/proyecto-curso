@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="img/favicon-modified.png" />
+    <script src="/js/index.js"></script>
 
     <title>Proyecto Integrador - Curriculum Vitae</title>
   </head>
@@ -24,7 +25,8 @@
         <p class="text-zinc-300 text-xl"></p>
       </div>
     </header>
-    <main
+    <main      
+      id="main"
       class="rounded-xl gap-2 relative items-center justify-center p-4 flex flex-col h-1/2 w-full shadow-xl"
     >
       <nav class="flex gap-48 -translate-y-1/2 -top-6 absolute">
@@ -122,6 +124,41 @@
             </li>
           </ul>
         </article>
+        <div
+        class="flex items-center gap-2 top-1/2 z-20 left-4"
+      >
+        <p id="btn-text">Dark Mode</p>
+        <button onclick="DarkModeHandler(true)" id="dmSwitchOn" class="p-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            class="fill-black"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"
+            />
+          </svg>
+        </button>
+        <button
+          onclick="DarkModeHandler(false)"
+          id="dmSwitchOff"
+          class="hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            class=""
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+            />
+          </svg>
+        </button>
+      </div>
       </section>
     </main>
   </body>
